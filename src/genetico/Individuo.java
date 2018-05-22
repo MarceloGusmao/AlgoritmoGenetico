@@ -100,14 +100,20 @@ public class Individuo {
 		int aux1 = 0;
 		int[] qt = new int[1000];
 		int aux2 = 0;
+		int min, temp;
 		
 		for(int i = 0; i <= aux-2; i++) {
+			min = i;
 			for( int j = i+1; j<=aux-1; j++) {
-				if(TAM[i]>TAM[j]) {
-					aux1 = TAM[i];
-					TAM[i] = TAM[j];
-					TAM[j] = aux1;
+				if(TAM[j]<TAM[min]) {
+					min = j;
+					//aux1 = TAM[i];
+					//TAM[i] = TAM[j];
+					//TAM[j] = aux1;
 				}
+				temp = TAM[i];
+				TAM[i] = TAM[min];
+				TAM[min] = temp;
 			}
 		}
 		
@@ -261,17 +267,23 @@ public class Individuo {
 		int[] aux = new int[100];
 		int pot = 95;
 		int aux2;
+		int min, temp;
 		
 		for(int i = 0; i < 100; i++) {
 			aux[i] = Avaliar(individuo[i]);
 		}
 		for(int i = 0; i < 98; i++) {
+			min = i;
 			for(int j = i + 1; j < 99; j++) {
-				if(aux[i] > aux[j]) {
-					aux2 = aux[i];
-					aux[i] = aux[j];
-					aux[j] = aux2;
+				if(aux[j] < aux[min]) {
+					min = j;
+					//aux2 = aux[i];
+					//aux[i] = aux[j];
+					//aux[j] = aux2;
 				}
+				temp = aux[i];
+				aux[i] = aux[min];
+				aux[min] = temp;
 			}
 		}
 		
@@ -305,9 +317,9 @@ public class Individuo {
 		int aux4 = -1;
 		char[] palavra = new char[11];
 		
-		while(aux4!=0) {
-			aux4 = r.nextInt(11);
-		}
+	
+		aux4 = r.nextInt(11);
+		
 		
 		individuo[aux] = pai[aux3 + 5];
 		individuo[aux2] = pai[aux3 + 6];
@@ -330,9 +342,6 @@ public class Individuo {
 			}
 		}
 		
-//		for(int i = 0; i < aux; i++ ) {
-//			individuo[i];
-//		}
 		System.out.print("Melhor ");
 		System.out.print(individuo[aux]);
 		System.out.println(" (" + Max + " )");

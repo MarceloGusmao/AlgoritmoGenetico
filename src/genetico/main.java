@@ -9,6 +9,7 @@ public class main {
 		int D;
 		int[] E = new int[1000];
 		int cont = 0;
+		int maior = -1;
 		
 		Individuo i = new Individuo();
 		CrossOver o = new CrossOver();
@@ -17,7 +18,8 @@ public class main {
 		i.povoaIndividuo();
 		i.melhor();
 		
-		while (i.melhor() != 11) {
+		while(i.melhor() != 11  ) {
+			
 			cont++;
 			D = 0;
 			C = i.soma();
@@ -41,9 +43,8 @@ public class main {
 		i.copiarString();
 		i.crossOver(); 
 		
-		System.out.println( cont + " Gerações Foram Necessarias Para Chegar No Resultado");
-		
 		}
+		System.out.println( cont + " Geraï¿½ï¿½es Foram Necessarias Para Chegar No Resultado");
 	}
 
 }
