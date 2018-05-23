@@ -9,11 +9,8 @@ public class main {
 		int D;
 		int[] E = new int[1000];
 		int cont = 0;
-		int maior = -1;
 		
 		Individuo i = new Individuo();
-		CrossOver o = new CrossOver();
-		Util u = new Util();
 		
 		i.povoaIndividuo();
 		i.melhor();
@@ -41,7 +38,7 @@ public class main {
 			
 		i.completarCruzamento(E, D);
 		i.copiarString();
-		i.crossOver(); 
+		i.crossOver2(i.individuo); 
 		
 		}
 		System.out.println( cont + " Gera��es Foram Necessarias Para Chegar No Resultado");
