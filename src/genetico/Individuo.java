@@ -313,19 +313,25 @@ public class Individuo {
 		}
 	}
 	
-	public int roleta(int tiro) {
+	public int roleta() {
 		
-		int aux = r.nextInt(tiro);
 		int cont = 0;
-
-		for(int i = 0; i < 100; i++) {
-			
+		int j = 0;
+		int total = 0;
+		
+		for(int i = 0; i < 100; i++) {	
 			cont = cont + Avaliar(individuo[i]);
-			if(aux < cont) {
-				return i;
-			}
 		}
-		return 0;
+		
+		int aux = r.nextInt(cont);
+		
+		while(total < aux) {
+			j++;
+			total = total + cont;
+			
+		}
+		
+		return j;
 	}
 	
 	public void cruzamento (int aux, int aux2, int aux3) {

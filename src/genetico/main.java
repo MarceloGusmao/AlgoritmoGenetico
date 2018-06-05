@@ -23,11 +23,11 @@ public class main {
 			i.melhorMembro();
 			for(int k = 0; k < 70 ; k++) {
 				if(C!=0) {
-					A = i.roleta(C);
-					B = i.roleta(C);
+					A = i.roleta();
+					B = i.roleta();
 					while(A != B) {
-					A = i.roleta(C);
-					B = i.roleta(C);
+					A = i.roleta();
+					B = i.roleta();
 					}
 				E[D] = A;
 				E[D+1] = B;
