@@ -147,8 +147,6 @@ public class Individuo {
 	}
 	
 	public void crossOver() {
-		
-		
 		switch(r.nextInt(37)) {
 			case 1: individuo[r.nextInt(100)][r.nextInt(11)] = ' ';
 			break;

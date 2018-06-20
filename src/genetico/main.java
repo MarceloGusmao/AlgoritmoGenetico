@@ -38,7 +38,7 @@ public class main {
 			
 		i.completarCruzamento(E, D);
 		i.copiarString();
-		i.crossOver2(i.individuo); 
+		i.crossOver(); 
 		
 		}
 		System.out.println( cont + " Gera��es Foram Necessarias Para Chegar No Resultado");
